@@ -8,7 +8,7 @@ export default class ColorSelector extends Component {
     })
   )
 
-  onSelectedColor(selectedColor) {
+  onSelectedColor = (selectedColor) => {
     this.props.changeColor(selectedColor)
   }
   
