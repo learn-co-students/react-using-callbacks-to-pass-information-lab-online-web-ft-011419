@@ -16,13 +16,14 @@ export default class Matrix extends Component {
     this.setState({
       selectedColor: newColor
     })
-    debugger;
   }
 
-  onCellColor = () => {this.state.selectedColor}
+  onCellColor() {
+    return this.state.selectedColor
+  }
 
   genRow = (vals) => (
-    vals.map((val, idx) => <Cell key={idx} color={val} selectColor={this.onCellColor} />)
+    vals.map((val, idx) => <Cell key={idx} color={val} selectColor={this.onCellColor.bind(this)} />)
   )
 
   genMatrix = () => (
